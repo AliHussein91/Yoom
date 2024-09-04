@@ -1,0 +1,39 @@
+@use "../../../../../scss/abstracts/" as *;
+
+.border-wrap-outer {
+  background: linear-gradient(90deg, $colorPrimary, $colorSecondary);
+  border-radius: 1.2rem;
+  padding: 0.09rem;
+  .container {
+    background-color: #fbfcfd;
+    max-width: fit-content;
+    border-radius: 1.1rem;
+    padding: 0.3rem 0.5rem;
+    .border-wrap {
+      display: inline-block;
+      padding: 0.16rem;
+      margin: 0 auto;
+      border-radius: 1.2rem;
+      cursor: pointer;
+      span {
+        display: block;
+        padding: 1.2rem 3.5rem;
+        width: 15rem;
+        text-align: center;
+        user-select: none;
+        &:hover {
+          color: $colorPrimary;
+        }
+      }
+      &.inner {
+        background: linear-gradient(90deg, $colorPrimary, $colorSecondary);
+        pointer-events: none;
+        span {
+          background-color: white;
+          color: $colorPrimary;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

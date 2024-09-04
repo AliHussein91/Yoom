@@ -1,0 +1,32 @@
+<div class="border-wrap-outer">
+  <div class="container">
+    <div
+      class="border-wrap inner"
+      [class.inner]="priceingPlan === 'hourly'"
+      (click)="choosePlan('hourly')"
+    >
+      <span>Hourly</span>
+    </div>
+    <div
+      class="border-wrap"
+      [class.inner]="priceingPlan === 'daily'"
+      (click)="choosePlan('daily')"
+    >
+      <span>Daily</span>
+    </div>
+    <div
+      class="border-wrap"
+      [class.inner]="priceingPlan === 'monthly'"
+      (click)="choosePlan('monthly')"
+    >
+      <span>Monthly</span>
+    </div>
+    <div
+      class="border-wrap"
+      [class.inner]="priceingPlan === 'yearly'"
+      (click)="choosePlan('yearly')"
+    >
+      <span>Yearly</span>
+    </div>
+  </div>
+</div>
