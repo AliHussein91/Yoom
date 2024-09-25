@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./scss/base/" as *;
+@use "./scss/abstracts/" as *;
+
+html {
+  font-size: $baseSize;
+  @include xs {
+    font-size: $baseSize * .65;
+  }
+  @include sm {
+    font-size: $baseSize * .75;
+  }
+  @include md {
+    font-size: $baseSize * .9;
+  }
+  @include lg {
+    font-size: $baseSize * 1;
+  }
+  @include xl {
+    font-size: $baseSize * 1.02;
+  }
+}
+
+body {
+  font-family: $sansPop;
+  font-size: 1.6rem;
+}
+

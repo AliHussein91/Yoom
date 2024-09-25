@@ -1,0 +1,39 @@
+@use "../../../../scss/abstracts/" as *;
+
+section.wrapper {
+  @include grid($columns: 6, $alignment: start);
+  padding: 4rem 0;
+  .branding {
+    grid-column: span 2;
+    @include grid($columns: 1);
+    row-gap: 1rem;
+    max-width: 65%;
+    margin: 0rem auto;
+    line-height: 2rem;
+  }
+  h3 {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  li {
+    color: #505967;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  .other-links , .main-links {
+    @include grid($columns: 1);
+    row-gap: 1rem;
+  }
+  .social-media {
+    grid-column: span 2;
+    @include grid($columns: 1);
+    row-gap: 1rem;
+    max-width: 70%;
+    margin: 0 auto;
+    ul {
+      @include flex();
+      gap: 1rem;
+    }
+  }
+}

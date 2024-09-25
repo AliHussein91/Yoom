@@ -1,0 +1,21 @@
+@use "../../../../../scss/abstracts/" as *;
+
+.benefit-item {
+  @include grid($columns: 1);
+  gap: 1.5rem;
+  max-width: 37rem;
+  grid-row: 1/4;
+  .text-container {
+    margin-top: 2rem;
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      padding: 1rem 0;
+    }
+    p {
+      font-size: 1.8rem;
+      padding: 1rem 0;
+      line-height: 2.6rem;
+    }
+  }
+}

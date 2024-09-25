@@ -1,0 +1,9 @@
+<div class="benefits">
+    <h1>Why Choose Yoom?</h1>
+    @for (item of benefitsList; track item.id) {
+        <app-benefit-item [icon]="item.icon" [title]="item.title" [details]="item.details"/>
+    }
+    <div class="bg-gradient">
+        <img src="../../../../assets/img/Bg-Ellepsis-Gradient.png" alt="">
+    </div>
+</div>

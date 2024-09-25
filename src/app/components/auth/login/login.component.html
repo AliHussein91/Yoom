@@ -1,0 +1,26 @@
+<section class="wrapper-card">
+  <h1>Login</h1>
+  <p>Choose preferred login method</p>
+  <app-toggler optionA="Email" optionB="Phone" (switchAction)="toggleMethod()" />
+  <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+    @if (!methodToggle) {
+    <app-email-input formControlName="email" />
+    } @else {
+    <app-phone-input formControlName="phone" />
+    }
+    <app-pass-input formControlName="password" />
+    <a class="reset-password" routerLink="/reset-password">Forget password?</a>
+    <app-button
+      class="login-btn"
+      buttonText="Log in"
+      textColor="white"
+      backgroundColor="#197EFA"
+      type="submit"
+    />
+  </form>
+  <div class="splitter">
+    <p>or</p>
+    <hr />
+  </div>
+  <app-button buttonText="Create new account" backgroundColor="#DAE2F6" />
+</section>

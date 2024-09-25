@@ -1,0 +1,15 @@
+@use "../../../../scss/abstracts/" as *;
+
+section {
+  padding: 2rem 0;
+  @include flex();
+  border-top: 1px solid $colorGreyShade;
+  background-color: $colorWhite;
+  text-align: center;
+  P {
+    color: $colorGrey;
+    padding: 0 6rem;
+    font-size: 1.9rem;
+    font-weight: 200;
+  }
+}

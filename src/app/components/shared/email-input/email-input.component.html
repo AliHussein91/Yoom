@@ -1,0 +1,13 @@
+<div class="methode-wrapper">
+  <label for="email">Email</label>
+  <input
+    required
+    type="email"
+    name="email"
+    placeholder="example@domain.com"
+    autocomplete="username"
+    [(ngModel)]="email"
+    (ngModelChange)="onChange($event)"
+    (blur)="onTouched()"
+  />
+</div>

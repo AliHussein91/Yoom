@@ -1,0 +1,33 @@
+@use "../../../../scss/abstracts/" as *;
+
+.container {
+  padding: 12rem 6rem;
+  background-color: #f4f8fa;
+  @include grid($columns: 3);
+  justify-items: center;
+    gap: 1rem;
+  .card {
+    @include grid($columns: 1);
+    gap: 1rem;
+    border: 2px solid white;
+    border-radius: 1.2rem;
+    width: 36rem;
+    padding: 2rem 3rem;
+    font-family: $sansInt;
+    line-height: 2rem;
+    background-color: #f0f5ff;
+    h2 {
+      margin-top: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.4rem;
+      color: #838e9e;
+      width: 27rem;
+    }
+    &:nth-child(2) {
+      background-color: white;
+    }
+  }
+}

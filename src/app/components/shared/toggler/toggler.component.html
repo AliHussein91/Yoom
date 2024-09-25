@@ -1,0 +1,8 @@
+<div class="login-methode">
+  <span [ngClass]="{ active: !methodeToggle }">{{ optionA }}</span>
+  <label class="loging-methode-toggler">
+    <input type="checkbox" (change)="onSwitch($event)" />
+    <span class="slider round"></span>
+  </label>
+  <span [ngClass]="{ active: methodeToggle }">{{ optionB }}</span>
+</div>

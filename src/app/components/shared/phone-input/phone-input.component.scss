@@ -1,0 +1,33 @@
+@use "../../../../scss/abstracts/" as *;
+
+div.methode-wrapper {
+  @include flex($direction: column, $alignment: start);
+  width: 100%;
+  position: relative;
+
+  label {
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+
+  input {
+    outline: none;
+    border-radius: 1.2rem;
+    border: 1px solid #b3b3b3;
+    min-width: 100%;
+    height: 5.2rem;
+    background-color: white;
+    font-size: 1.4rem;
+    color: #505967;
+    padding: 1.5rem 4.5rem;
+    padding-left: 10rem;
+  }
+
+  app-dropdown-menu {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #ccc;
+  }
+}

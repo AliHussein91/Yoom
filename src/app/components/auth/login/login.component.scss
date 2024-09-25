@@ -1,0 +1,47 @@
+@use "../../../../scss/abstracts/" as *;
+
+:host {
+  max-width: 100vw;
+  background-color: $colorPrimaryShade;
+  @include grid($columns: 1);
+  height: 100%
+}
+.wrapper-card {
+  @include wrapperCard();
+  form {
+    & > * {
+      width: 100%;
+    }
+    @include flex($direction: column, $alignment: start);
+    row-gap: 1rem;
+    width: 52rem;
+
+    .reset-password {
+      width: 100%;
+      font-family: $sansInt;
+      font-size: 1.4rem;
+      color: #505967;
+      text-align: end;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        color: $colorPrimary;
+      }
+    }
+    .login-btn {
+      width: 100%;
+    }
+  }
+  .splitter {
+    position: relative;
+    width: 100%;
+    p {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 0 1rem;
+    }
+  }
+
+}

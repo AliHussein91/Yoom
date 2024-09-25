@@ -1,0 +1,74 @@
+@use "./fonts" as *;
+@use "./colors" as *;
+
+@mixin grid(
+  $columns: 2,
+  $fraction: 1fr,
+  $rows: auto,
+  $alignment: center
+) {
+  display: grid;
+  grid-template-columns: repeat($columns, $fraction);
+  grid-template-rows: $rows;
+  align-items: $alignment;
+}
+
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $justification: space-between,
+  $alignment: center
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justification;
+  align-items: $alignment;
+}
+
+@mixin font($family: $sansPop, $size: 1.6rem, $weight: 400) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin textLinearGradient(
+  $direction: to right,
+  $colorA: $colorPrimary,
+  $colorB: $colorSecondary
+) {
+  background-image: linear-gradient($direction, $colorA, $colorB);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@mixin cardHost() {
+  max-width: 100vw;
+  background-color: $colorPrimaryShade;
+  @include grid($columns: 1);
+  height: 100%;
+}
+
+@mixin wrapperCard() {
+
+  max-width: fit-content;
+  margin: 5rem auto;
+  background-color: white;
+  border-radius: 1.2rem;
+  @include grid($columns: 1);
+  row-gap: 1.5rem;
+  text-align: center;
+  padding: 2rem 5rem 5rem 5rem;
+  h1 {
+    font-weight: 600;
+    font-size: 2.6rem;
+  }
+  p {
+    font-size: 1.6rem;
+    font-family: $sansInt;
+    color: #838e9e;
+  }
+}

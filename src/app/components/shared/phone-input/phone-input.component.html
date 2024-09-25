@@ -1,0 +1,13 @@
+<div class="methode-wrapper">
+  <label for="phone">Phone</label>
+  <input
+    type="number"
+    name="phone"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    placeholder="+1 234 567 890"
+    [(ngModel)]="phone"
+    (ngModelChange)="onChange($event)"
+    (blur)="onTouched()"
+  />
+  <app-dropdown-menu (countryKey)="setCountryKey($event)" />
+</div>

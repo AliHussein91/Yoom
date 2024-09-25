@@ -1,0 +1,28 @@
+@use "../../../../scss/abstracts/" as *;
+
+.benefits {
+  @include grid($columns: 3, $alignment: start);
+  justify-items: center;
+  position: relative;
+
+  padding: 4rem 6rem 7rem 6rem;
+  gap: 6rem;
+  h1 {
+    grid-column: span 3;
+    font-size: 3.6rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  .bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+  }
+}

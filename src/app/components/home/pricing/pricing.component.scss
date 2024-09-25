@@ -1,11 +1,12 @@
 @use "../../../../scss/abstracts/" as *;
 
-.container{
-    @include grid($columns: 1);
-    justify-items: center;
-    gap: 3rem;
-    h1 {
-        font-size: 3.6rem;
-        font-weight: 600;
-    }
+.container {
+  @include grid($columns: 1);
+  justify-items: center;
+  gap: 4rem;
+  padding: 4rem 6rem;
+  h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
 }

@@ -1,0 +1,32 @@
+@use "../../../../../scss/abstracts/" as *;
+
+
+
+nav {
+  @include flex();
+  padding: 3rem 5.6rem;
+  ul {
+    @include flex();
+    gap: 2.6rem;
+    li a {
+      font-size: 1.4rem;
+      color: #505967;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $colorPrimary;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .btn-group {
+    @include flex();
+    gap: 2rem;
+    app-button {
+      width: 100px;
+
+    }
+  }
+}
+
+

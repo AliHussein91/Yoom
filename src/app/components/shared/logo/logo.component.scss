@@ -1,0 +1,19 @@
+@use "../../../../scss/abstracts/" as *;
+
+#logo {
+  max-width: 124px;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  @include grid();
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  .logo-title {
+    font-family: $sansInt;
+    font-size: 26px;
+    font-weight: bold;
+    color: $colorPrimary;
+  }
+}

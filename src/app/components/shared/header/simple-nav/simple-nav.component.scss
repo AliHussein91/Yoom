@@ -1,0 +1,9 @@
+@use "../../../../../scss/abstracts/" as *;
+
+
+  nav {
+    background-color: $colorWhite;
+    @include flex($justification: center);
+    padding: 3rem 0;
+  }
+
